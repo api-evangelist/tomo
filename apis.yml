@@ -1,8 +1,27 @@
 aid: tomo
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tomo.png
 name: Tomo
-description: 'Tomo is a company surfaced as a portfolio company of bain-capital-ventures, ribbit-capital
-  and added to the API Evangelist network as a stub for enrichment. Sector: ai-apps. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: 'Tomo is a consumer "personal AI" application that lives in your text
+  messages: users tell Tomo about their life, goals, problems, and aspirations over
+  SMS, and the AI assistant learns those goals and guides them toward achieving them
+  through ongoing text-based conversation. Backed by Bain Capital Ventures and Ribbit
+  Capital, Tomo operates in the AI-apps sector as a mobile-first consumer product rather
+  than a developer platform. As of this enrichment pass the company publishes a marketing
+  site (tomo.ai) with About, Careers, Privacy, Terms, and Login pages but no public
+  developer program: no API documentation, OpenAPI/AsyncAPI specification, SDKs, CLI,
+  MCP server, llms.txt, or .well-known discovery endpoints were found. This profile
+  is maintained for API Evangelist network completeness.'
 url: https://raw.githubusercontent.com/api-evangelist/tomo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,10 +32,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Apps
+- Personal Assistant
+- Conversational AI
+- Consumer AI
+- Messaging
+- SMS
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +51,18 @@ maintainers:
 common:
 - type: Website
   url: https://www.tomo.ai/
+- type: PrivacyPolicy
+  url: https://www.tomo.ai/privacy
+- type: TermsOfService
+  url: https://www.tomo.ai/terms
+- type: Login
+  url: https://www.tomo.ai/login
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 0
+  pass: local-v1
+  note: 'Consumer personal-AI app; no public API/developer surface found. Verified
+    via curl/dig probes: /docs, /developers, /api, /llms.txt, /.well-known/security.txt
+    all return the Next.js SPA shell (not real). Real pages: /about /careers /privacy
+    /terms /login.'
